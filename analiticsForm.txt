@@ -1,0 +1,186 @@
+	<form action="<?php echo $editFormAction; ?>" name="form1" method="post">
+		<table align="center">
+			<tr>
+				<td nowrap="nowrap" align="right">Usuario: * </td>
+	  			<td align="left">
+	            	<input class="content" type="text" name="username" size="20" maxlength="20" value="<?php echo htmlentities($_POST['username'], ENT_COMPAT, 'utf-8'); ?>" />
+	 			</td>
+	  		</tr>
+	    	<tr>
+				<td nowrap="nowrap" align="right">Password: *</td>
+	      		<td align="left">
+	            	<input class="content" type="password" name="password" size="20" maxlength="20"  />
+	            </td>
+			</tr>
+		    <tr>
+				<td nowrap="nowrap" align="right">Confirmar password: *</td>
+				<td align="left">
+	            	<input class="content" type="password" name="password2" size="20" maxlength="20" />
+	            </td>
+			</tr>
+	    	<tr valign="baseline">
+				<td nowrap="nowrap" align="right">Correo electr�nico: *</td>
+				<td align="left">
+	            	<input class="content" type="text" name="correo_electronico" size="20" maxlength="255" value="<?php echo htmlentities($_POST['correo_electronico'], ENT_COMPAT, 'utf-8'); ?>" />
+	            </td>
+			</tr>
+	    	<tr>
+				<td nowrap="nowrap" align="right">Nombres: </td>
+			  	<td align="left">
+	            	<input class="content" type="text" name="nombres" size="20" maxlength="100" value="<?php echo htmlentities($_POST['nombres'], ENT_COMPAT, 'utf-8'); ?>" />
+	            </td>
+			</tr>
+	    	<tr>
+				<td nowrap="nowrap" align="right">Apellidos: *</td>
+			 	<td align="left">
+	            	<input class="content" type="text" name="last_name" size="20" maxlength="100" value="<?php echo htmlentities($_POST['last_name'], ENT_COMPAT, 'utf-8'); ?>" />
+	            </td>
+			</tr>
+	    	<tr>
+			 	<td nowrap="nowrap" align="right">Tipo de identificacion: </td>
+			  	<td align="left">
+			  		<select class="content" name="tipo_identificacion" id="tipo_identificacion" title='' tabindex="0" >
+	                    <option label="Cedula de Ciudadania" <?php if ($_POST['tipo_identificacion']=='CC') {echo "selected=\"selected\"";}?> value="CC" >Cedula de Ciudadania</option>
+	                    <option label="Tarjeta de Identidad" <?php if ($_POST['tipo_identificacion']=='TI') {echo "selected=\"selected\"";}?>value="TI">Tarjeta de Identidad</option>
+	                    <option label="Pasaporte" <?php if ($_POST['tipo_identificacion']=='Pasaporte') {echo "selected=\"selected\"";}?> value="Pasaporte">Pasaporte</option>
+					</select>
+				</td>
+			</tr>
+	    	<tr>
+			 	<td nowrap="nowrap" align="right">Numero de identificacion: </td>
+			  	<td align="left">
+	            	<input class="content" type="text" name="num_identificacion" size="20" maxlength="25" value="<?php echo htmlentities($_POST['num_identificacion'], ENT_COMPAT, 'utf-8'); ?>" />
+	            </td>
+			</tr>
+	    	<tr>
+			  	<td nowrap="nowrap" align="right">Telefono: </td>
+			  	<td align="left">
+	            	<input class="content" type="text" name="phone_home" size="20" maxlength="25" value="<?php echo htmlentities($_POST['phone_home'], ENT_COMPAT, 'utf-8'); ?>" />
+	            </td>
+			</tr>
+	    	<tr>
+			  	<td nowrap="nowrap" align="right">Fax: </td>
+			  	<td align="left">
+	            	<input class="content" type="text" name="phone_fax" size="20" maxlength="25" value="<?php echo htmlentities($_POST['phone_fax'], ENT_COMPAT, 'utf-8'); ?>" />
+	            </td>
+			</tr>
+	    	<tr>
+			  	<td align="right" nowrap="nowrap">Direcci�n: </td>		  	
+			  	<td align="left">
+	            	<input class="content" type="text" name="direccion" size="20" maxlength="255" value="<?php echo htmlentities($_POST['direccion'], ENT_COMPAT, 'utf-8'); ?>" />
+	            </td>
+			</tr>
+	    	<tr>
+			  	<td nowrap="nowrap" align="right">Ciudad: </td>
+			  	<td align="left">
+	            	<input class="content" type="text" name="ciudad" size="20" maxlength="100" value="<?php echo htmlentities($_POST['ciudad'], ENT_COMPAT, 'utf-8'); ?>" />		
+	            </td>
+			</tr>
+	    	<tr>
+			  	<td nowrap="nowrap" align="right">Departamento: </td>		  	
+			  	<td align="left">
+			  		<select class="content" name="departamento" id="departamento" title='' tabindex="0" >
+					<option label="AMAZONAS" 	 		<?php if ($_POST['departamento']=='01') {echo "selected=\"selected\"";}?> value="01">AMAZONAS</option>
+					<option label="ANTIOQUIA"	 		<?php if ($_POST['departamento']=='02') {echo "selected=\"selected\"";}?> value="02">ANTIOQUIA</option>
+					<option label="ARAUCA" 		 		<?php if ($_POST['departamento']=='03') {echo "selected=\"selected\"";}?> value="03">ARAUCA</option>
+					<option label="ATLANTICO" 	 		<?php if ($_POST['departamento']=='04') {echo "selected=\"selected\"";}?> value="04" >ATLANTICO</option>				
+					<option label="BOLIVAR" 	 		<?php if ($_POST['departamento']=='05') {echo "selected=\"selected\"";}?> value="05">BOLIVAR</option>
+					<option label="BOYACA" 		 		<?php if ($_POST['departamento']=='06') {echo "selected=\"selected\"";}?> value="06">BOYACA</option>
+					<option label="CALDAS" 		 		<?php if ($_POST['departamento']=='07') {echo "selected=\"selected\"";}?> value="07" >CALDAS</option>
+					<option label="CAQUETA" 	 		<?php if ($_POST['departamento']=='08') {echo "selected=\"selected\"";}?> value="08">CAQUETA</option>
+					<option label="CASANARE" 	 		<?php if ($_POST['departamento']=='09') {echo "selected=\"selected\"";}?> value="09">CASANARE</option>
+					<option label="CAUCA" 				<?php if ($_POST['departamento']=='10') {echo "selected=\"selected\"";}?> value="10" >CAUCA</option>
+					<option label="CESAR" 		 		<?php if ($_POST['departamento']=='11') {echo "selected=\"selected\"";}?> value="11">CESAR</option>
+					<option label="CHOCO" 		 		<?php if ($_POST['departamento']=='12') {echo "selected=\"selected\"";}?> value="12">CHOCO</option>
+					<option label="CORDOBA" 	 		<?php if ($_POST['departamento']=='13') {echo "selected=\"selected\"";}?> value="13" >CORDOBA</option>
+					<option label="CUNDINAMARCA" 		<?php if ($_POST['departamento']=='14') {echo "selected=\"selected\"";}?> value="14">CUNDINAMARCA</option>
+					<option label="BOGOT� D.C."  		<?php if ($_POST['departamento']=='15') {echo "selected=\"selected\"";}?> value="15">BOGOT� D.C.</option>
+					<option label="GUAINIA" 	 		<?php if ($_POST['departamento']=='16') {echo "selected=\"selected\"";}?> value="16">GUAINIA</option>
+					<option label="GUAVIARE" 	 		<?php if ($_POST['departamento']=='17') {echo "selected=\"selected\"";}?> value="17" >GUAVIARE</option>
+					<option label="HUILA" 		 		<?php if ($_POST['departamento']=='18') {echo "selected=\"selected\"";}?> value="18">HUILA</option>
+					<option label="LA GUAJIRA"   		<?php if ($_POST['departamento']=='19') {echo "selected=\"selected\"";}?> value="19">LA GUAJIRA</option>
+					<option label="MAGDALENA" 	 		<?php if ($_POST['departamento']=='20') {echo "selected=\"selected\"";}?> value="20" >MAGDALENA</option>
+					<option label="META" 		 		<?php if ($_POST['departamento']=='21') {echo "selected=\"selected\"";}?> value="21">META</option>
+					<option label="NARI�O" 		 		<?php if ($_POST['departamento']=='22') {echo "selected=\"selected\"";}?> value="22">NARI�O</option>
+					<option label="NORTE DE SANTANDER" 	<?php if ($_POST['departamento']=='23') {echo "selected=\"selected\"";}?> value="23">NORTE DE SANTANDER</option>
+					<option label="PUTUMAYO" 			<?php if ($_POST['departamento']=='24') {echo "selected=\"selected\"";}?> value="24">PUTUMAYO</option>
+					<option label="QUINDIO" 			<?php if ($_POST['departamento']=='25') {echo "selected=\"selected\"";}?> value="25">QUINDIO</option>
+					<option label="RISARALDA" 			<?php if ($_POST['departamento']=='26') {echo "selected=\"selected\"";}?> value="26">RISARALDA</option>
+					<option label="SAN ANDR�S ISLA" 	<?php if ($_POST['departamento']=='27') {echo "selected=\"selected\"";}?> value="27">SAN ANDR�S ISLA</option>
+					<option label="SANTANDER" 			<?php if ($_POST['departamento']=='28') {echo "selected=\"selected\"";}?> value="28">SANTANDER</option>
+					<option label="SUCRE" 				<?php if ($_POST['departamento']=='29') {echo "selected=\"selected\"";}?> value="29">SUCRE</option>
+					<option label="TOLIMA" 				<?php if ($_POST['departamento']=='30') {echo "selected=\"selected\"";}?> value="30">TOLIMA</option>
+					<option label="VALLE" 				<?php if ($_POST['departamento']=='31') {echo "selected=\"selected\"";}?> value="31">VALLE</option>
+					<option label="VAUPES" 				<?php if ($_POST['departamento']=='32') {echo "selected=\"selected\"";}?> value="32">VAUPES</option>
+					<option label="VICHADA" 			<?php if ($_POST['departamento']=='33') {echo "selected=\"selected\"";}?> value="33">VICHADA</option>				
+					</select>
+				</td>
+			</tr>
+	    	<tr>
+			  	<td nowrap="nowrap" align="right">Profesi�n: </td>
+			  	<td align="left">
+	            	<input class="content" type="text" name="profesion" size="20" maxlength="255" value="<?php echo htmlentities($_POST['profesion'], ENT_COMPAT, 'utf-8'); ?>" />
+	            </td>
+			</tr>
+	    	<tr>
+			  	<td nowrap="nowrap" align="right">Nivel de formaci�n: </td>
+			  	<td align="left">
+				  	<select class="content" name="nvl_formacion" id="nvl_formacion" title='' tabindex="0" >
+				  		<option label="Primaria" <?php if ($_POST['nvl_formacion']=='Primaria') {echo "selected=\"selected\"";}?> value="Primaria">Primaria</option>
+						<option label="Secundaria" <?php if ($_POST['nvl_formacion']=='Secundaria') {echo "selected=\"selected\"";}?> value="Secundaria">Secundaria</option>
+						<option label="Pregrado" <?php if ($_POST['nvl_formacion']=='Pregrado') {echo "selected=\"selected\"";}?> value="Pregrado">Pregrado</option>
+						<option label="Postgrado" <?php if ($_POST['nvl_formacion']=='Postgrado') {echo "selected=\"selected\"";}?> value="Postgrado">Postgrado</option>
+						<option label="Maestria" <?php if ($_POST['nvl_formacion']=='Maestria') {echo "selected=\"selected\"";}?> value="Maestria">Maestria</option>
+						<option label="Doctorado" <?php if ($_POST['nvl_formacion']=='Doctorado') {echo "selected=\"selected\"";}?> value="Doctorado">Doctorado</option>		
+					</select>
+				</td>
+			</tr>
+			<tr>
+			  	<td align="right" colspan="2">
+	            <br />
+			  		<h1>Vinculaci�n laboral</h1>
+		  		</td>
+			</tr>	
+	    	<tr>
+			  	<td nowrap="nowrap" align="right">Entidad: </td>
+			  	<td align="left">
+					<input type="hidden" name="id_entidad" size="20" maxlength="255" value="<?php echo htmlentities($_POST['id_entidad'], ENT_COMPAT, 'utf-8'); ?>" />
+					<input class="content" type="text" name="entidad" size="20" maxlength="255" value="<?php echo htmlentities($_POST['entidad'], ENT_COMPAT, 'utf-8'); ?>" />
+	            </td>
+	        </tr>
+	        <tr>
+	        	<td colspan="2" style="padding-left:160px;">
+					<input class="form" type="button" value="Buscar Entidad" onclick="javascript:window.open('Investigador/entidades.php','Entidades',' width=705, height=370')"/>
+	            	<input class="form" type="button" value="Crear Entidad" onClick="javascript:window.open('Investigador/crear_entidad.php','Crear_Entidad',' width=600, height=300')"/> 
+				</td>
+			</tr>
+	    	<tr>
+			  	<td nowrap="nowrap" align="right">Cargo: </td>
+			  	<td align="left">
+	            	<input class="content" type="text" name="cargo" size="20" maxlength="255" value="<?php echo htmlentities($_POST['cargo'], ENT_COMPAT, 'utf-8'); ?>" />
+	            </td>
+			</tr>
+	    	<tr>
+			  	<td nowrap="nowrap" align="right">Dependencia: </td>
+			  	<td align="left">
+	            	<input class="content" type="text" name="dependencia" size="20" maxlength="255" value="<?php echo htmlentities($_POST['dependencia'], ENT_COMPAT, 'utf-8'); ?>" />
+	            </td>
+			</tr>
+			<tr valign="baseline">
+				<td align="right" valign="top" nowrap="nowrap"><h1>Tematicas de investigacion</h1> </td>			
+		  		<td align="left">										
+					<br/><?php crearArbol('tesauro','id','nom_termino','id_padre',0,' - '); ?>	  										
+				</td>
+			</tr>
+	    	<tr>
+			  	<td align="right">
+	            	<br />
+			 		<input class="form" type="submit" value="Registrar" />
+	            </td>
+	            <td align="left">
+	            	<br />
+			 		<input class="form" type="button" value="Cancelar" onclick="location.href='index.php';" />	
+			 	</td>
+			</tr>
+		</table>
+	</form>
